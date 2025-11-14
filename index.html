@@ -1,0 +1,1184 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVH Group - Empowering Ideas With Intelligent Innovation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: white;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -80%;
+      width: 80%;
+      height: 100vh;
+      background: #111;
+      color: white;
+      padding: 25px;
+      transition: 0.4s ease;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 15px;
+    }
+
+    .mobile-menu-header h2 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .close-btn {
+      font-size: 30px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .mobile-menu-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #000;
+      color: #fff;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .navbar-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .navbar-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .navbar-menu a:hover {
+      color: #4a90e2;
+    }
+
+    .navbar-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #4a90e2;
+      transition: width 0.3s;
+    }
+
+    .navbar-menu a:hover::after {
+      width: 100%;
+    }
+
+    .video-section {
+      position: relative;
+      height: 90vh;
+      width: 100%;
+      overflow: hidden;
+      max-width: 100vw;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-overlay {
+      position: absolute;
+      bottom: 90px;
+      left: 20px;
+      color: white;
+      max-width: 50%;
+      z-index: 10;
+    }
+
+    .video-overlay h1 {
+      font-size: 2.0rem;
+      margin: 0 0 1rem 0;
+      line-height: 1.2;
+    }
+
+    .video-overlay p {
+      font-size: 1.2rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .verticals-section {
+      padding: 5rem 5%;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+
+    .verticals-section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .verticals-tabs {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tab {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: 3px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .tab:hover::before {
+      left: 100%;
+    }
+
+    .tab i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+      color: #4a90e2;
+      transition: transform 0.3s;
+    }
+
+    .tab:hover i {
+      transform: scale(1.1) rotateY(360deg);
+    }
+
+    .tab span {
+      display: block;
+      font-size: 0.90rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-top: 0.5rem;
+    }
+
+    .tab:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(74, 144, 226, 0.3);
+      border-color: #4a90e2;
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+      color: #fff;
+    }
+
+    .tab.active i,
+    .tab.active span {
+      color: #fff;
+    }
+
+    .vertical-content-container { 
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      min-height: 400px;
+    }
+
+    .content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .content.active {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .leftside {
+      width: 70%;
+    }
+
+    .rightside {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+      gap: 15px;
+    }
+
+    .content h3 {
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #4a90e2;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .content img {
+      max-width: 100%;
+      width: 250px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .future-logo {
+      max-width: 280px !important;
+    }
+
+    .company-logo {
+      max-width: 220px !important;
+    }
+
+    .visit-itech-btn,
+    .small-btn {
+      padding: 10px 25px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .visit-itech-btn:hover,
+    .small-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .leadership-section {
+      background: linear-gradient(135deg, #0e0e1a, #02010f);
+      text-align: center;
+      margin: 50px 150px;
+      border-radius: 10px;
+      padding: 60px 6%;
+      color: #f0ecec;
+      overflow: hidden;
+      width: auto;
+      max-width: calc(100vw - 300px);
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .leadership-section::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,140,255,0.3), transparent);
+      top: -100px;
+      right: -100px;
+      filter: blur(60px);
+    }
+
+    .leadership-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .leadership-section h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .leadership-tagline {
+      font-size: 1.3rem;
+      color: #00aaff;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .leadership-desc {
+      font-size: 1.06rem;
+      max-width: 850px;
+      margin: 0 auto 50px;
+      color: #cbd2ff;
+      line-height: 1.7;
+    }
+
+    .future-grid {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .future-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 30px 25px;
+      width: 300px;
+      backdrop-filter: blur(6px);
+      transition: 0.3s ease;
+      text-align: left;
+    }
+
+    .future-card h3 {
+      font-size: 1.1rem;
+      color: #00c3ff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .future-card p {
+      font-size: 0.95rem;
+      color: #d3d9ff;
+      line-height: 1.6;
+    }
+
+    .future-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.25);
+      border-color: #00eaff;
+    }
+
+    .why-rvh {
+      width: 100%;
+      max-width: 100vw;
+      padding: 80px 8%;
+      background: #f8faff;
+      text-align: center;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .why-rvh h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #0a3a75;
+    }
+
+    .why-rvh h2 span {
+      color: #007bff;
+    }
+
+    .why-subtext {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #444;
+      margin-bottom: 45px;
+    }
+
+    .why-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .why-card {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.07);
+      transition: 0.3s ease;
+      box-shadow: 0 0 0 rgba(0,0,0,0.03);
+    }
+
+    .why-card i {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #0066d6;
+    }
+
+    .why-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #0d3d72;
+    }
+
+    .why-card p {
+      font-size: 0.95rem;
+      color: #979696;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+      border-color: #007bff;
+    }
+
+    footer {
+      background: #00213e;
+      color: #bab8b8;
+      padding: 40px 0;
+      font-family: "Poppins", sans-serif;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .footer {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer div {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer h3 {
+      color: #f5f5f5;
+      margin-bottom: 15px;
+    }
+
+    .footer p {
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 12px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc00;
+    }
+
+    .fa-linkedin { color: #3a51b6; }
+    .fa-instagram { color: #eb37bb; }
+    .fa-facebook { color: #3c83d3; }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 1200px) {
+      .leadership-section {
+        margin-left: 50px;
+        margin-right: 50px;
+        max-width: calc(100vw - 100px);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .navbar {
+        padding: 12px 20px;
+      }
+
+      .leftside {
+        width: 100%;
+      }
+
+      .rightside {
+        width: 100%;
+        padding-top: 20px;
+      }
+
+      .content.active {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .navbar-menu {
+        display: none;
+      }
+
+      .navbar {
+        padding: 15px 20px;
+      }
+
+      .navbar-logo {
+        font-size: 1.5rem;
+      }
+
+      .video-section {
+        height: 60vh;
+      }
+
+      .video-overlay {
+        max-width: 90%;
+        bottom: 30px;
+        left: 15px;
+      }
+
+      .video-overlay h1 {
+        font-size: 1.8rem;
+      }
+
+      .video-overlay p {
+        font-size: 1rem;
+      }
+
+      .verticals-section {
+        padding: 3rem 4%;
+      }
+
+      .verticals-section h2 {
+        font-size: 2rem;
+      }
+
+      .verticals-tabs {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .tab {
+        padding: 1.2rem 1rem;
+      }
+
+      .tab i {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      .tab span {
+        font-size: 0.85rem !important;
+      }
+
+      .vertical-content-container {
+        padding: 1.5rem;
+      }
+
+      .content h3 {
+        font-size: 1.8rem;
+      }
+
+      .content p {
+        font-size: 0.95rem;
+      }
+
+      .content img {
+        max-width: 200px;
+      }
+
+      .leadership-section {
+        margin: 30px 20px;
+        max-width: calc(100vw - 40px);
+        padding: 40px 20px;
+      }
+
+      .leadership-section h2 {
+        font-size: 2rem;
+      }
+
+      .future-card {
+        width: 100%;
+      }
+
+      .why-rvh {
+        padding: 50px 5%;
+      }
+
+      .why-card {
+        padding: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px 10px;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .video-section {
+        height: 50vh;
+      }
+
+      .video-overlay {
+        bottom: 20px;
+        left: 10px;
+        max-width: 95%;
+      }
+
+      .video-overlay h1 {
+        font-size: 1.3rem;
+      }
+
+      .video-overlay p {
+        font-size: 0.85rem;
+      }
+
+      .verticals-section {
+        padding: 2rem 3%;
+      }
+
+      .verticals-section h2 {
+        font-size: 1.6rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .verticals-tabs {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+      }
+
+      .tab {
+        padding: 1rem 0.8rem;
+      }
+
+      .tab i {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.4rem !important;
+      }
+
+      .tab span {
+        font-size: 0.65rem !important;
+      }
+
+      .vertical-content-container {
+        padding: 1rem;
+      }
+
+      .content h3 {
+        font-size: 1.4rem;
+      }
+
+      .content p {
+        font-size: 0.85rem;
+      }
+
+      .visit-itech-btn,
+      .small-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 18px;
+      }
+
+      .leadership-section {
+        margin: 20px 10px;
+        max-width: calc(100vw - 20px);
+        padding: 30px 15px;
+      }
+
+      .leadership-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .why-rvh {
+        padding: 40px 4%;
+      }
+
+      .why-rvh h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-logo">RVH Group</div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    
+    <div class="navbar-menu" id="navbarMenu">
+      <a href="index.html">Home</a> 
+      <a href="about.html">About</a>
+      <a href="career.html">Careers</a> 
+      <a href="companies.html">Companies</a> 
+      <a href="contact.html">Contact</a> 
+      <a href="faqs.html">FAQ's</a> 
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <h2>Menu</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
+
+      <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="career.html">Careers</a>
+        <a href="companies.html">Companies</a>
+        <a href="contact.html">Contact</a>
+        <a href="faqs.html">FAQ's</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </nav>
+
+  <div class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="bgvideo.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay">
+      <h1>Empowering Ideas With Intelligent Innovation</h1>
+      <p>RVH Group drives digital transformation by combining technology strategy & creativity to build scalable solutions for the future.</p>
+    </div>
+  </div>
+
+  <section class="verticals-section">
+    <h2>Our Sources</h2>
+    <p class="section-subtitle">Discover our diverse portfolio of businesses driving innovation across multiple industries</p>
+
+    <div class="verticals-tabs">
+      <div class="tab active" data-target="itech">
+        <i class="fas fa-microchip"></i>
+        <span>Information Technology</span>
+      </div>
+      <div class="tab" data-target="techsupport">
+        <i class="fas fa-headset"></i>
+        <span>Tech Support</span>
+      </div>
+      <div class="tab" data-target="digital">
+        <i class="fas fa-chart-line"></i>
+        <span>Digital Marketing</span>
+      </div>
+      <div class="tab" data-target="trainings">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Trainings</span>
+      </div>
+      <div class="tab" data-target="hr">
+        <i class="fas fa-users"></i>
+        <span>Human Resources</span>
+      </div>
+      <div class="tab" data-target="finance">
+        <i class="fas fa-file-invoice"></i>
+        <span>Finance Registration</span>
+      </div>
+      <div class="tab" data-target="marketing">
+        <i class="fas fa-bullseye"></i>
+        <span>Others</span>
+      </div>
+    </div>
+
+    <div class="vertical-content-container">
+      <div class="content active" id="itech">
+        <div class="leftside">
+          <h3>Information Technology</h3>
+          <p>
+            Information Technology (IT) refers to the development, management, and use of computer-based systems, networks, software, and digital applications to collect, store, process, secure, and distribute information. It enables organizations to improve efficiency, enhance communication, automate operations, and deliver innovative solutions that create business value in a digital-first world drive innovation and digital growth across industries.
+          </p>
+          
+          <p>
+            Organizations are increasingly adopting IT solutions to enhance performance, improve customer service, reduce costs, and stay competitive in a fast-evolving digital environment. From small startups to global enterprises, Information Technology plays a critical role in shaping innovation, improving decision-making, and driving long-term growth.
+          </p>
+        </div>
+        <div class="rightside">
+          <img class="future-logo" src="logo.png" alt="Future Logo">
+          <a href="https://www.futureinvo.com/" class="visit-itech-btn">Visit Website</a>
+        </div>
+      </div>
+
+      <div class="content" id="techsupport">
+        <div class="leftside">
+          <h3>Tech Support</h3>
+          <p>
+            Our Tech Support Services are designed to provide quick, reliable, and expert assistance to keep your technology running without interruption. From diagnosing technical issues to offering step-by-step guidance, our team ensures timely support for computers, software, networks, and digital applications. We provide remote and on-site support with proactive monitoring to prevent problems before they occur. Our goal is to improve system performance, minimize downtime, and deliver a smooth technology experience for users and organizations.
+          </p>
+          <p>
+            We understand that technical issues can affect productivity and cause frustration. That's why our Tech Support team is committed to offering fast responses, clear communication, and user-friendly solutions. Whether you need help with system setup, troubleshooting, installation, or updates, we ensure a smooth and stress-free support experience. Our experts take the time to listen, guide, and resolve issues efficiently because your comfort with technology matters.
+          </p>
+        </div>
+        <div class="rightside">
+          <img class="company-logo" src="futronix3-removebg-preview.png" alt="Company Logo">
+          <button class="small-btn">Visit Website</button>
+        </div>
+      </div>
+
+      <div class="content" id="digital">
+        <div class="leftside">
+          <h3>Digital Marketing</h3>
+          <p>
+            Digital Marketing is a strategic approach to promoting brands, products, and services through online platforms. It involves using tools like social media, search engines, email campaigns, and content marketing to reach the right audience at the right time. With data-driven strategies and creative campaigns, digital marketing helps businesses build brand awareness, attract potential customers, and drive measurable growth.
+          </p>
+          <p>
+            By analyzing consumer behavior, optimizing online visibility, and delivering targeted content, digital marketing ensures stronger customer engagement and improved conversion rates. In today's digital era, it is an essential tool for businesses to stay competitive, connect with their audience, and achieve long-term success.
+          </p>
+        </div>
+        <div class="rightside">
+          <img class="company-logo" src="skill3-removebg-preview.png" alt="Skill Logo">
+          <img class="company-logo" src="hero3-removebg-preview.png" alt="Hero Logo">
+        </div>
+      </div>
+
+      <div class="content" id="trainings">
+        <div class="leftside">
+          <h3>Trainings</h3>
+          <p>
+            Training plays a vital role in enhancing knowledge, improving skills, and shaping individuals for professional growth. Our Training & Skill Development programs are designed to provide practical, industry-focused learning that empowers participants to excel in their careers. We offer tailored training modules that combine theoretical understanding with real-world application, ensuring learners gain hands-on experience and confidence.
+          </p>
+          <p>
+            Whether it's corporate training, technical skill development, soft skills enhancement, or job-oriented programs, our sessions are delivered by experienced trainers who focus on interactive learning, performance improvement, and continuous development. Our goal is to equip individuals and teams with the right skills, mindset, and expertise to meet evolving industry standards and achieve success in the modern workplace.
+          </p>
+        </div>
+        <div class="rightside">
+          <img class="future-logo" src="gyantrix2.png" alt="Gyantrix Logo">
+          <a href="https://www.Gyantrix.com/" class="visit-itech-btn">Visit Website</a>
+        </div>
+      </div>
+
+      <div class="content" id="hr">
+        <div class="leftside">
+          <h3>Human Resources</h3>
+          <p>
+            Human Resources (HR) is the core function that manages and supports an organization's most valuable asset — its people. HR focuses on recruitment, employee welfare, performance management, training, and creating a positive work environment that encourages growth and productivity. A strong HR team ensures that the right talent is hired, nurtured, and retained through effective policies, employee engagement, and career development initiatives.
+          </p>
+          <p>
+            HR also plays a key role in building workplace culture, maintaining compliance, resolving employee concerns, and aligning people strategies with business goals. By fostering communication, trust, and professionalism, HR contributes to a motivated workforce and a stronger, more successful organization.
+          </p>
+        </div>
+        <div class="rightside">
+          <img class="company-logo" src="verify3-removebg-preview.png">
+
+       <img class="company-logo" src="ghs3-removebg-preview.png">
+      </div>
+      </div>
+
+      <div class="content" id="finance">
+        <div class="leftside">
+        <h3>Finance Registration</h3>
+        <p>
+          Finance and Registration services play a crucial role in helping individuals and businesses establish a strong legal and financial foundation. These services include business registration, financial documentation, compliance support, tax filing, and statutory registrations required to operate smoothly and legally. With expert guidance, businesses can avoid legal complications, maintain financial transparency, and meet regulatory requirements on time.
+        </p>
+        <p>
+          Our Finance & Registration solutions ensure proper documentation, accurate financial record-keeping, and hassle-free processing, enabling clients to focus on growth while we handle the legal and financial formalities. From company registration and GST filing to financial planning and compliance management, we provide end-to-end support for a seamless and secure business journey.
+        </p>
+      </div>
+      <div class="rightside">
+
+        <img class="company-logo" src="tax3-removebg-preview.png">
+        <img class="company-logo" src="qfl3-removebg-preview.png">
+      </div>
+      </div>
+
+      <div class="content" id="marketing">
+        <div class="leftside">
+        <h3>Others</h3>
+        <p>
+          Marketing is the strategic process of understanding customer needs, creating value, and building strong brand connections to drive business growth. It involves researching markets, identifying target audiences, developing compelling messages, and promoting products or services through the right channels. Effective marketing not only increases brand visibility but also builds trust, drives customer engagement, and enhances sales.
+        </p>
+        <p>
+          By combining creativity with data-driven strategies, marketing helps businesses stay competitive, reach the right audience, and establish long-term customer relationships. From branding and advertising to market analysis and promotional campaigns, marketing plays a vital role in shaping a company's image and achieving sustainable success in the marketplace.
+        </p>
+      </div>
+      <div class="rightside">
+
+       <img class="company-logo" src="market5.png">
+       <img class="company-logo" src="interiors3.png">
+       <img class="company-logo" src="construct5.png">
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+<section class="leadership-section">
+  <div class="leadership-content">
+    <h2>Leadership & Future Momentum</h2>
+    <p class="leadership-tagline">Proven Leadership. Limitless Opportunity.</p>
+
+    <p class="leadership-desc">
+      Our success is driven by a passionate commitment to innovation and powered by 
+      <strong>visionary leadership</strong> and highly skilled teams. We foster a culture of 
+      collaboration, ownership, and continuous learning—empowering every individual to create impact.
+    </p>
+
+    <div class="future-grid">
+      <div class="future-card">
+        <h3><i class="fas fa-globe"></i> Reliable Global Expansion</h3>
+        <p>Strategic expansion with focus on <strong>ISO-compliant</strong> green & sustainable infrastructure.</p>
+      </div>
+      <div class="future-card">
+        <h3><i class="fas fa-robot"></i> Digital Transformation</h3>
+        <p>Driving adoption of next-gen digital products, AI-powered solutions & cognitive automation.</p>
+      </div>
+      <div class="future-card">
+        <h3><i class="fas fa-users"></i> Human Development</h3>
+        <p>Empowering people through continuous skill-building, leadership training & community upliftment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="why-rvh">
+  <h2>Why Choose <span>RVH Group?</span></h2>
+  <p class="why-subtext">A future-driven ecosystem built to deliver global-standard excellence with innovation, trust, and end-to-end value.</p>
+
+  <div class="why-cards">
+    <div class="why-card">
+      <i class="fas fa-layer-group"></i>
+      <h3>Integrated Multi-Sector Strength</h3>
+      <p>9 verticals working together to offer unified, end-to-end solutions under one trusted brand.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-bullseye"></i>
+      <h3>Client-Obsessed Delivery</h3>
+      <p>Every solution is tailored for impact, quality, and measurable business value that lasts.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Innovation at the Core</h3>
+      <p>Driven by modern technology, smart systems, and a vision to stay ahead of tomorrow.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Trust, Ethics & Transparency</h3>
+      <p>Built on a foundation of ethics, reliability, and long-term relationships.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+ <footer>
+    <div class="footer">
+        <div  class="rvhfooter">
+      <h3>RVH Group</h3>
+      <p>RVH Group refers to the global organization, and may refer to one or more, of the member firms,<br> each of which is a separate legal entity. We provide comprehensive services to clients.</p>
+        </div>
+
+        <div class="fqueries">
+  <h3>What We Do</h3>
+  <p>We provide a wide range of professional services designed to help individuals, startups, and businesses grow with confidence in the digital age. Our focus is on delivering high-quality, innovative and result-oriented solutions.</p>
+  <p>From IT services, digital marketing, and business support to training & professional development — RVH Group is committed to empowering growth through expertise and excellence.</p>
+</div>
+
+      <div class="socialmedia">
+  <h3>Contact Us</h3>
+  <p>We’re here to support you with any inquiries related to our services, partnerships, training programs or business opportunities. Connect with us and our team will be happy to assist you.</p>
+
+  <p>
+    📞 +91-73868-79818<br>
+    🌐 www.rvhgroups.com<br>
+    ✉️ info@rvhgroups.com
+  </p>
+
+  <span>Follow Us:</span>
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</div>
+
+    </div>
+  </footer>
+
+  <script>
+
+ const hamburgerIcon = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("overlay");
+
+    hamburgerIcon.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+
+
+
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs and contents
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        // Show corresponding content
+        const target = tab.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

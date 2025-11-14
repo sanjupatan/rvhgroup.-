@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVH Group - Empowering Ideas With Intelligent Innovation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    :root{
+      --brand:#0055ff;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --container:1100px;
+      --radius:12px;
+      --shadow: 0 8px 24px rgba(12,18,36,0.06);
+      --glass: rgba(255,255,255,0.7);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:#0f1724;-webkit-font-smoothing:antialiased;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+    
+
+    .hero{
+      background:linear-gradient(90deg, rgba(11,92,255,0.06), rgba(11,134,255,0.03));
+      padding:64px 0 40px;border-bottom:1px solid rgba(15,23,36,0.04)
+    }
+    .hero-grid{display:flex;gap:32px;align-items:center;justify-content:space-between}
+    .hero-left{flex:1}
+    .eyebrow{display:inline-block;background:rgba(11,92,255,0.08);color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    h1{margin:12px 0 8px;font-size:30px}
+    .lead{color:var(--muted);max-width:70%}
+    .cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:var(--brand);color:white;border:none;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--brand);border:1.5px solid rgba(11,92,255,0.12)}
+
+    .cards-wrap{margin-top:30px}
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .company-card{
+      background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(15,23,36,0.03);
+      transition:transform .22s ease,box-shadow .22s ease;
+      display:flex;flex-direction:column;gap:12px;height:100%;
+    }
+    .company-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(12,18,36,0.08)}
+    .company-logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(90deg,rgba(0,85,255,0.08),rgba(0,85,255,0.02));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);font-size:18px}
+    .company-title{font-weight:700}
+    .company-desc{color:var(--muted);font-size:14px;flex:1}
+    .company-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+    .small-btn{padding:8px 10px;border-radius:8px;border:1px solid rgba(11,92,255,0.12);background:transparent;color:var(--brand);font-weight:700;cursor:pointer}
+
+    .industries{margin-top:36px;padding:22px 18px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,250,253,0.98));border-radius:12px;border:1px solid rgba(15,23,36,0.04)}
+    .industries h3{margin-bottom:12px}
+    .industry-list{display:flex;flex-wrap:wrap;gap:12px}
+    .industry-pill{background:white;padding:10px 14px;border-radius:999px;border:1px solid rgba(15,23,36,0.04);font-weight:600;color:#111}
+
+    .synergy{margin-top:36px;display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .synergy-card{background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,250,253,0.98));padding:20px;border-radius:12px;border:1px solid rgba(15,23,36,0.04);box-shadow:var(--shadow)}
+    .synergy-visual{background:linear-gradient(90deg,rgba(11,92,255,0.06),rgba(11,134,255,0.03));padding:18px;border-radius:12px;text-align:center}
+    .synergy-visual .node{display:inline-block;background:white;padding:12px 14px;border-radius:999px;margin:6px;border:1px solid rgba(11,92,255,0.12);font-weight:700;color:var(--brand)}
+
+    .stats-row{display:flex;gap:18px;margin-top:30px}
+    .stat-card{flex:1;background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(15,23,36,0.04);box-shadow:var(--shadow);text-align:center}
+    .stat-card .n{font-size:28px;font-weight:800;color:var(--brand)}
+    .stat-card .l{color:var(--muted);margin-top:6px}
+
+    .cta-strip{margin-top:36px;background:linear-gradient(90deg, rgba(11,92,255,0.08), rgba(11,134,255,0.03));padding:24px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .cta-strip .text{max-width:70%}
+    .cta-strip h3{margin:0}
+    .cta-strip p{margin:6px 0;color:var(--muted)}
+
+ 
+    @media (max-width:1100px){.cards-grid{grid-template-columns:repeat(2,1fr)}.synergy{grid-template-columns:1fr}}
+    @media (max-width:700px){
+      .navbar-menu{display:none}
+      .hamburger{display:block}
+      .hero-grid{flex-direction:column;align-items:flex-start}
+      .cards-grid{grid-template-columns:1fr}
+      .synergy{grid-template-columns:1fr}
+      .cta-strip{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+<body>
+
+  <nav class="navbar">
+  <div class="navbar-logo">
+     RVH Group
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="navbar-menu" id="navbarMenu">
+    <a href="index.html">Home</a> 
+    <a href="about.html">About</a>
+    <a href="career.html">Careers</a> 
+    <a href="companies.html">Companies</a> 
+    <a href="contact.html">Contact</a> 
+    <a href="faqs.html">FAQ's</a> 
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h2>Menu</h2>
+      <span class="close-btn" id="closeMenu"></span>
+    </div>
+
+    <div class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="career.html">Careers</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQ's</a>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+</nav>
+  <div class="container-company-inner">
+      <div class="company-left">
+        <div class="background-company">
+          <h2 class="company-title">Company at RVH Group</h2>
+          <p class="company-lead">
+            At RVH Group, we believe talent is the foundation of every successful company. As a growing Group of Companies operating across multiple industries, we offer diverse career opportunities that enable individuals to learn, lead, and grow within a dynamic ecosystem.
+          </p>
+          <p class="company-sub">
+            Whether you aim to excel in Technology, HR, Marketing, Finance, or Corporate Operations — RVH Group provides a platform where your skills create impact.
+          </p><br>
+          
+        </div>
+      </div>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">Companies • RVH Group</span>
+          <h1>Our Subsidiaries & Business Verticals</h1>
+          <p class="lead">RVH Group operates as a connected ecosystem of subsidiary companies — each specialized yet tightly integrated to deliver end-to-end solutions across technology, infrastructure, marketing, finance and talent development.</p>
+          <div class="cta-row">
+            <button class="btn" onclick="document.location.href='career.html'">Careers at RVH</button>
+            <button class="btn secondary" onclick="document.location.href='contact.html'">Contact Sales</button>
+          </div>
+        </div>
+
+        <aside style="width:360px">
+          <div class="hero-card" style="background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px;border:1px solid rgba(15,23,36,0.04);box-shadow:var(--shadow)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <div style="font-weight:700">At a glance</div>
+              <div style="color:var(--muted);font-size:13px">Since 2023</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">9</div>
+                <div style="color:var(--muted);font-size:13px">Divisions</div>
+              </div>
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">250+</div>
+                <div style="color:var(--muted);font-size:13px">Projects</div>
+              </div>
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">50+</div>
+                <div style="color:var(--muted);font-size:13px">Clients</div>
+              </div>
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">1000+</div>
+                <div style="color:var(--muted);font-size:13px">Applicants / yr</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="cards-wrap">
+        <div class="cards-grid">
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">IT</div>
+              <div>
+                <div class="company-title">RVH IT Solutions</div>
+                <div class="company-desc">Custom software, cloud services, digital transformation and secure IT platforms for enterprises.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Bengaluru • Full-stack</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-it.html'">Explore</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">DIG</div>
+              <div>
+                <div class="company-title">RVH Digital</div>
+                <div class="company-desc">Performance marketing, SEO, brand strategy and lead generation services that drive growth.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Mumbai • Marketing</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-digital.html'">Explore</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">BPO</div>
+              <div>
+                <div class="company-title">RVH BPO Services</div>
+                <div class="company-desc">24/7 customer support, back-office operations and secure data services.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Hyderabad • Operations</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-bpo.html'">Explore</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">RE</div>
+              <div>
+                <div class="company-title">RVH Real Estate</div>
+                <div class="company-desc">Residential & commercial property development, smart living concepts and property management.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Mumbai • Real Estate</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-realestate.html'">Explore</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">CON</div>
+              <div>
+                <div class="company-title">RVH Construction</div>
+                <div class="company-desc">Civil & infrastructure development, renovations, sustainable construction with ESG focus.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Pune • Construction</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-construction.html'">Explore</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">INT</div>
+              <div>
+                <div class="company-title">RVH Interior Designs</div>
+                <div class="company-desc">Turnkey interior design services focused on modern, sustainable aesthetics and workmanship.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Bengaluru • Interiors</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-interiors.html'">Explore</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="company-logo">TRN</div>
+              <div>
+                <div class="company-title">RVH Training</div>
+                <div class="company-desc">Corporate learning, upskilling, internship programs and role-based training aligned to industry needs.</div>
+              </div>
+            </div>
+            <div class="company-meta">
+              <div style="color:var(--muted);font-size:13px">Remote • Training</div>
+              <button class="small-btn" onclick="document.location.href='companies/rvh-training.html'">Explore</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="industries" style="margin-top:30px">
+        <h3>Industries & Verticals</h3>
+        <div class="industry-list" style="margin-top:12px">
+          <div class="industry-pill">Information Technology</div>
+          <div class="industry-pill">Digital Marketing</div>
+          <div class="industry-pill">Real Estate & Property</div>
+          <div class="industry-pill">Construction & Interiors</div>
+          <div class="industry-pill">BPO & Support Services</div>
+          <div class="industry-pill">Training & Skill Development</div>
+          <div class="industry-pill">Finance & Compliance</div>
+        </div>
+      </div>
+
+      <!-- Synergy -->
+      <div class="synergy">
+        <div class="synergy-card">
+          <h3 style="margin:0 0 8px">How Our Companies Work Together</h3>
+          <p style="color:var(--muted);margin-bottom:14px">Each RVH company specializes in its domain, but we design engagements so clients benefit from an integrated delivery model — shared technology platforms, trained operations teams, and single-point accountability.</p>
+
+          <ul style="color:var(--muted);line-height:1.8;margin-left:18px">
+            <li><strong>Single-Source Delivery:</strong> From design to deployment and support.</li>
+            <li><strong>Cross-Company Talent:</strong> Skilled teams shared across projects.</li>
+            <li><strong>End-to-End Accountability:</strong> One partner, many capabilities.</li>
+          </ul>
+        </div>
+
+        <div class="synergy-visual">
+          <div style="font-weight:700;color:var(--brand);margin-bottom:12px">RVH Synergy</div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+            <div class="node">IT</div>
+            <div class="node">Digital</div>
+            <div class="node">Real Estate</div>
+            <div class="node">Construction</div>
+            <div class="node">Interiors</div>
+            <div class="node">BPO</div>
+            <div class="node">Training</div>
+            <div class="node">Finance</div>
+          </div>
+          <p style="color:var(--muted);margin-top:14px;font-size:13px">Nodes are teams that collaborate on project lifecycles — from discovery to operations.</p>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="n">9</div>
+          <div class="l">Integrated Divisions</div>
+        </div>
+        <div class="stat-card">
+          <div class="n">250+</div>
+          <div class="l">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="n">50+</div>
+          <div class="l">Trusted Clients</div>
+        </div>
+      </div>
+
+      <div class="cta-strip" style="margin-top:28px">
+        <div class="text">
+          <h3 style="margin:0">Partner with a group that delivers end-to-end</h3>
+          <p style="margin:6px 0 0;color:var(--muted)">Explore our companies for services, partnerships, or careers across RVH Group.</p>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <button class="btn" onclick="document.location.href='contact.html'">Get a Consultation</button>
+          <button class="btn secondary" onclick="document.location.href='career.html'">View Careers</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+<footer>
+    <div class="footer">
+      <h3>RVH Group</h3>
+      <p>RVH Group refers to the global organization, and may refer to one or more, of the member firms,<br> each of which is a separate legal entity. We provide comprehensive services to clients.</p>
+
+
+      <div class="socialmedia">
+          Contact Us: 📞 +91-73868-79818<br>
+                  🌐 www.rvhgroups.com<br>
+                    ✉️ info@rvhgroups.com<br>
+
+        Follow Us:
+        <a href="https://www.linkedin.com">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+<script>
+
+  const hamburgerIcon = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const overlay = document.getElementById("overlay");
+
+  hamburgerIcon.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+    // mobile menu toggle (keeps behavior consistent with your other pages)
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.navbar-menu');
+    hamburger && hamburger.addEventListener('click', () => {
+      if(getComputedStyle(navMenu).display === 'none') navMenu.style.display = 'flex';
+      else navMenu.style.display = 'none';
+    });
+ 
+
+  </script>
+
+</body>
+</html>

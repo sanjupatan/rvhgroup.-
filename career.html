@@ -1,0 +1,989 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVH Group - Empowering Ideas With Intelligent Innovation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVH Group - Empowering Ideas With Intelligent Innovation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+:root {
+  --brand: #0055ff;
+}
+
+/* ===== CAREER SECTION ===== */
+.career-section {
+  padding: 0;
+  overflow: hidden;
+}
+
+.container-career-inner {
+  max-width: 100%;
+}
+
+.career-left {
+  width: 100%;
+}
+
+.background-career {
+  position: relative;
+  background: url('careerbg5.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 10%;
+}
+
+.background-career::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 20, 60, 0.4);
+  z-index: 0;
+}
+
+.background-career > * {
+  position: relative;
+  z-index: 1;
+}
+
+.career-title {
+  padding-top: 0;
+  padding-left: 25px;
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.background-career p {
+  padding-left: 30px;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  max-width: 50%;
+  color: white;
+}
+
+.career-lead, .career-sub {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: #f8fafc;
+  padding: 80px 5%;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hero .container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0055ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.hero-left h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.hero-left .lead {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: #0055ff;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background: #0041c7;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #0055ff;
+  border: 2px solid #0055ff;
+}
+
+.btn.secondary:hover {
+  background: #0055ff;
+  color: #fff;
+}
+
+.company-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #111827;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.muted-small {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.hero-right .stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  background: white;
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+.stat .num {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat .muted {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* ===== GENESIS SECTION ===== */
+.genesis-section {
+  background: #e0edfa;
+  padding: 80px 10%;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.genesis-section .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.genesis-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.genesis-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 6px 0 12px;
+}
+
+.genesis-lead {
+  color: #4b5563;
+  font-size: 16px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.timeline {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 3px;
+  height: 100%;
+  background: #d1d5db;
+  border-radius: 8px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+  padding-left: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -3px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #0055ff;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 3px #bfdbfe;
+}
+
+.timeline-item.future .timeline-dot {
+  background: #10b981;
+  box-shadow: 0 0 0 3px #bbf7d0;
+}
+
+.timeline-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.timeline-item p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+/* ===== MODAL ===== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h3 {
+  font-size: 22px;
+  color: #111827;
+}
+
+.modal .muted {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.input, .select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.file {
+  font-size: 14px;
+  color: #374151;
+}
+
+
+
+
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  background: #374151;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: var(--brand);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet landscape (900px - 1024px) */
+@media (max-width: 1024px) {
+  .background-career {
+    padding: 3rem 8%;
+    min-height: 550px;
+  }
+
+  .career-title {
+    font-size: 1.9rem;
+    padding-left: 20px;
+  }
+
+  .background-career p {
+    font-size: 1.1rem;
+    padding-left: 20px;
+    max-width: 60%;
+  }
+
+  .genesis-section {
+    padding: 60px 8%;
+  }
+
+  .hero-left h1 {
+    font-size: 34px;
+  }
+}
+
+/* Tablet portrait (768px - 900px) */
+@media (max-width: 900px) {
+  
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-left .lead {
+    max-width: 100%;
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
+  .hero-right .stats {
+    margin-top: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .background-career {
+    min-height: 500px;
+    padding: 2.5rem 6%;
+  }
+
+  .career-title {
+    font-size: 1.8rem;
+    padding-left: 15px;
+  }
+
+  .background-career p {
+    font-size: 1rem;
+    padding-left: 15px;
+    max-width: 70%;
+  }
+
+  .genesis-section {
+    padding: 50px 6%;
+  }
+}
+
+/* Mobile landscape and small tablets (600px - 768px) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-left .lead {
+    font-size: 15px;
+  }
+
+  .hero-right .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .stat .num {
+    font-size: 24px;
+  }
+
+  .background-career {
+    min-height: 480px;
+    padding: 2rem 5%;
+  }
+
+  .career-title {
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+
+  .background-career p {
+    font-size: 0.95rem;
+    padding-left: 10px;
+    max-width: 80%;
+  }
+
+  .genesis-section {
+    padding: 40px 5%;
+  }
+
+  .genesis-section h2 {
+    font-size: 24px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 24px;
+  }
+
+  .timeline-item h3 {
+    font-size: 16px;
+  }
+
+  .timeline-item p {
+    font-size: 14px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal h3 {
+    font-size: 20px;
+  }
+}
+
+/* Small mobile (480px - 600px) */
+@media (max-width: 600px) {
+  
+
+  .hero {
+    padding: 40px 4%;
+  }
+
+  .hero-left h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .hero-left .lead {
+    font-size: 14px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .hero-right .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .stat .num {
+    font-size: 22px;
+  }
+
+  .stat .muted {
+    font-size: 13px;
+  }
+
+  .background-career {
+    min-height: 450px;
+    padding: 2rem 4%;
+    background-position: center center;
+  }
+
+  .career-title {
+    font-size: 1.5rem;
+    padding-left: 5px;
+  }
+
+  .background-career p {
+    font-size: 0.9rem;
+    padding-left: 5px;
+    max-width: 90%;
+  }
+
+  .genesis-section {
+    padding: 40px 4%;
+  }
+
+  .genesis-section h2 {
+    font-size: 22px;
+  }
+
+  .genesis-lead {
+    font-size: 14px;
+  }
+
+  .timeline-item h3 {
+    font-size: 15px;
+  }
+
+  .timeline-item p {
+    font-size: 13px;
+  }
+
+  .modal {
+    padding: 16px;
+    margin: 10px;
+  }
+
+  .modal h3 {
+    font-size: 18px;
+  }
+
+ 
+}
+
+/* Extra small mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 22px;
+  }
+
+  .company-logo {
+    width: 36px;
+    height: 36px;
+    font-size: 9px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .background-career {
+    min-height: 400px;
+    padding: 1.5rem 3%;
+  }
+
+  .career-title {
+    font-size: 1.3rem;
+    padding-left: 0;
+  }
+
+  .background-career p {
+    font-size: 0.85rem;
+    padding-left: 0;
+    max-width: 95%;
+  }
+
+  .genesis-section {
+    padding: 30px 3%;
+  }
+
+  .genesis-section h2 {
+    font-size: 20px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline {
+    padding-left: 16px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+}
+
+/* Very small screens (below 360px) */
+@media (max-width: 360px) {
+  
+
+  .hero-left h1 {
+    font-size: 20px;
+  }
+
+  .background-career {
+    min-height: 380px;
+    padding: 1.5rem 2%;
+  }
+
+  .career-title {
+    font-size: 1.2rem;
+  }
+
+  .background-career p {
+    font-size: 0.8rem;
+  }
+
+  .genesis-section h2 {
+    font-size: 18px;
+  }
+
+  .timeline-item h3 {
+    font-size: 14px;
+  }
+
+  .timeline-item p {
+    font-size: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-logo">
+       RVH Group
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar-menu" id="navbarMenu">
+      <a href="index.html">Home</a> 
+    <a href="about.html">About</a>
+    <a href="career.html">Careers</a> 
+    <a href="companies.html">Companies</a> 
+    <a href="contact.html">Contact</a> 
+    <a href="faqs.html">FAQ's</a> 
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h2>Menu</h2>
+      <span class="close-btn" id="closeMenu">&times;</span>
+    </div>
+
+    <div class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="career.html">Careers</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQ's</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </nav>
+  
+  <section id="career" class="career-section">
+    <div class="container-career-inner">
+      <div class="career-left">
+        <div class="background-career">
+          <h2 class="career-title">Careers at RVH Group</h2>
+          <p class="career-lead">
+            At RVH Group, we believe talent is the foundation of every successful company. As a growing Group of Companies operating across multiple industries, we offer diverse career opportunities that enable individuals to learn, lead, and grow within a dynamic ecosystem.
+          </p>
+          <p class="career-sub">
+            Whether you aim to excel in Technology, HR, Marketing, Finance, or Corporate Operations — RVH Group provides a platform where your skills create impact.
+          </p><br>
+          
+        </div>
+      </div>
+
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">Careers • RVH Group</span>
+          <h1>Grow your career across multiple companies under RVH Group</h1>
+          <p class="lead">We are a group of specialized companies — technology, marketing, HR, finance, training and more. Find roles by company, function or location and join a team where your work makes visible impact.</p>
+          <div class="cta-row">
+            <button class="btn" onclick="showModal()">Explore Openings</button>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+            <div class="company-logo">RVH logo</div>
+            <div>
+              <div style="font-weight:700">7 Subsidiaries</div>
+              <div class="muted-small">Opportunities across tech, marketing, HR, finance & training</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <div class="stats">
+            <div class="stat">
+              <div class="num">120+</div>
+              <div class="muted">Active Openings</div>
+            </div>
+            <div class="stat">
+              <div class="num">7</div>
+              <div class="muted">Subsidiary Companies</div>
+            </div>
+            <div class="stat">
+              <div class="num">85%</div>
+              <div class="muted">Hiring Rate</div>
+            </div>
+            <div class="stat">
+              <div class="num">1000+</div>
+              <div class="muted">Applicants / yr</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+ <section class="genesis-section">
+  <div class="container">
+    <div class="genesis-header">
+      <span class="eyebrow">Our Genesis & Momentum </span>
+      <h2>The Story of Rapid, Intentional Growth</h2>
+      
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2023 – The Foundation of Innovation</h3>
+          <p>We began as a lean, agile IT solutions company with a bold vision: to innovate far beyond software.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2024 – The Leap to Infrastructure</h3>
+          <p>Expanded into <strong>Real Estate, Interior Design & Digital Marketing</strong>, creating strong business synergies and diversified service reach.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2025 – The Human & Operational Engine</h3>
+          <p>Launched dedicated <strong>Training, Tech Support & BPO divisions</strong>, strengthening the human and operational foundation for scalable impact.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>The Future – Global & Cognitive</h3>
+          <p>Next phase includes global expansion with <strong>AI-driven solutions, sustainable operations</strong>, and internationally recognized infrastructure excellence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <div id="applyModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3>Quick Apply</h3>
+        <button class="close" onclick="hideModal()">✕</button>
+      </div>
+      <p class="muted">Apply for a role or send your CV to be considered across the group.</p>
+      <form id="applyForm" onsubmit="submitForm(event)">
+        <div class="form-row" style="margin-top:12px">
+          <input name="name" required placeholder="Full name" class="input" />
+          <input name="email" required placeholder="Email address" class="input" />
+        </div>
+        <div style="margin-top:12px" class="form-row">
+          <input name="phone" placeholder="Phone " class="input" required />
+          <input name="company" required placeholder="Company name" class="input" />
+        </div>
+        <div style="margin-top:12px">
+          <div class="file">Upload Resume (PDF / DOC) <input type="file" name="resume" style="display:block;margin-top:8px" /></div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+          <button type="button" class="btn secondary" onclick="hideModal()">Cancel</button>
+          <button class="btn" type="submit">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+        <div  class="rvhfooter">
+      <h3>RVH Group</h3>
+      <p>RVH Group refers to the global organization, and may refer to one or more, of the member firms,<br> each of which is a separate legal entity. We provide comprehensive services to clients.</p>
+        </div>
+
+        <div class="fqueries">
+  <h3>What We Do</h3>
+  <p>We provide a wide range of professional services designed to help individuals, startups, and businesses grow with confidence in the digital age. Our focus is on delivering high-quality, innovative and result-oriented solutions.</p>
+  <p>From IT services, digital marketing, and business support to training & professional development — RVH Group is committed to empowering growth through expertise and excellence.</p>
+</div>
+
+      <div class="socialmedia">
+  <h3>Contact Us</h3>
+  <p>We’re here to support you with any inquiries related to our services, partnerships, training programs or business opportunities. Connect with us and our team will be happy to assist you.</p>
+
+  <p>
+    📞 +91-73868-79818<br>
+    🌐 www.rvhgroups.com<br>
+    ✉️ info@rvhgroups.com
+  </p>
+
+  <span>Follow Us:</span>
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</div>
+
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerIcon = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("overlay");
+
+    hamburgerIcon.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+    function showModal(){
+      const m = document.getElementById('applyModal');
+      m.style.display='flex';
+      m.setAttribute('aria-hidden','false');
+    }
+    
+    function hideModal(){
+      const m = document.getElementById('applyModal');
+      m.style.display='none';
+      m.setAttribute('aria-hidden','true');
+    }
+
+    function submitForm(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      alert('Application submitted. We will get back to you soon.');
+      e.target.reset();
+      hideModal();
+    }
+  </script>
+
+</body>
+
+</html>

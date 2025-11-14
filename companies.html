@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVH Group - Empowering Ideas With Intelligent Innovation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+  .background-company {
+  position: relative;
+  background: url('companybg3.png') no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  min-height:600px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.background-company  h2 {
+  
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+.company-title {
+ padding-left: 25px;
+}
+
+.background-company  p {
+  padding-left: 30px;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  max-width: 50%;
+}
+.future-logo{
+  float: right;
+  size: 14px;
+}
+    :root{
+      --brand:#0055ff;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --container:1100px;
+      --radius:12px;
+      --shadow: 0 8px 24px rgba(12,18,36,0.06);
+      --glass: rgba(255,255,255,0.7);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:#0f1724;overflow-x: hidden;-webkit-font-smoothing:antialiased;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+    
+
+    .hero{
+      background:linear-gradient(90deg, rgba(11,92,255,0.06), rgba(11,134,255,0.03));
+      padding:64px 0 40px;border-bottom:1px solid rgba(15,23,36,0.04)
+    }
+    .hero-grid{display:flex;gap:32px;align-items:center;justify-content:space-between}
+    .hero-left{flex:1}
+    .eyebrow{display:inline-block;background:rgba(11,92,255,0.08);color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    h1{margin:12px 0 8px;font-size:30px}
+    .lead{color:var(--muted);max-width:70%}
+    .cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:var(--brand);color:white;border:none;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--brand);border:1.5px solid rgba(11,92,255,0.12)}
+
+    .cards-wrap { margin-top: 30px; }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 18px;
+}
+
+
+
+
+.small-btn {
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 85, 255, 0.3);
+  background: transparent;
+  color: white;
+  background-color: #0055ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.small-btn:hover {
+  background: white;
+  color: #0055ff;
+}
+
+    .industries{margin-top:36px;padding:22px 18px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,250,253,0.98));border-radius:12px;border:1px solid rgba(15,23,36,0.04)}
+    .industries h3{margin-bottom:12px}
+    .industry-list{display:flex;flex-wrap:wrap;gap:12px}
+    .industry-pill{background:white;padding:10px 14px;border-radius:999px;border:1px solid rgba(15,23,36,0.04);font-weight:600;color:#111}
+
+    .synergy{margin-top:36px;display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .synergy-card{background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,250,253,0.98));padding:20px;border-radius:12px;border:1px solid rgba(15,23,36,0.04);box-shadow:var(--shadow)}
+    .synergy-visual{background:linear-gradient(90deg,rgba(11,92,255,0.06),rgba(11,134,255,0.03));padding:18px;border-radius:12px;text-align:center}
+    .synergy-visual .node{display:inline-block;background:white;padding:12px 14px;border-radius:999px;margin:6px;border:1px solid rgba(11,92,255,0.12);font-weight:700;color:var(--brand)}
+
+    .stats-row{display:flex;gap:18px;margin-top:30px}
+    .stat-card{flex:1;background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(15,23,36,0.04);box-shadow:var(--shadow);text-align:center}
+    .stat-card .n{font-size:28px;font-weight:800;color:var(--brand)}
+    .stat-card .l{color:var(--muted);margin-top:6px}
+
+    .cta-strip{margin-top:36px;background:linear-gradient(90deg, rgba(11,92,255,0.08), rgba(11,134,255,0.03));padding:24px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .cta-strip .text{max-width:70%}
+    .cta-strip h3{margin:0}
+    .cta-strip p{margin:6px 0;color:var(--muted)}
+
+ 
+    @media (max-width:1100px){.cards-grid{grid-template-columns:repeat(1,1fr)}.synergy{grid-template-columns:1fr}}
+    @media (max-width:700px){
+      .navbar-menu{display:none}
+      .hamburger{display:block}
+      .hero-grid{flex-direction:column;align-items:flex-start}
+      .cards-grid{grid-template-columns:1fr}
+      .synergy{grid-template-columns:1fr}
+      .cta-strip{flex-direction:column;align-items:flex-start}
+    }
+      @media (max-width:1100px){.cards-grid{grid-template-columns:repeat(1,1fr)}.synergy{grid-template-columns:1fr}}
+    @media (max-width:700px){
+      
+      .hero-grid{flex-direction:column;align-items:flex-start}
+      .cards-grid{grid-template-columns:1fr}
+      .synergy{grid-template-columns:1fr}
+      .cta-strip{flex-direction:column;align-items:flex-start}
+    }
+
+    /* Small Screen Fix (<500px) */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 22px;
+  }
+  .company-desc {
+    font-size: 15px;
+  }
+  .company-title {
+    align-items: center;
+    font-size: 18px;
+  }
+  .company-logo {
+    width: 230px;
+  }
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;   /* FIXES RIGHT SIDE WHITE SPACE */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* CARD WRAPPER */
+.company-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* CONTENT */
+.company-content {
+  width: 70%;
+  line-height: 1.6;
+}
+
+/* LOGO SECTION */
+.company-logo-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LOGO */
+.company-logo {
+  width: 240px;        /* Increased for visibility */
+  height: auto;
+  object-fit: contain;
+}
+
+/* BUTTON */
+.visit-btn {
+  margin-top: 15px;
+  background: #0063ff;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.visit-btn:hover {
+  background: #004fcc;
+}
+.textcenter{
+  align-items: center;
+  justify-content: center;
+}
+/* ========== MOBILE FIXES ========== */
+@media (max-width: 768px) {
+
+  .company-card {
+    flex-direction: column;       /* Content first, logos after */
+    text-align: center;
+    align-items: center;
+  }
+
+  .company-content {
+    width: 100%;
+  }
+
+  .company-logo-section {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Bigger logos on small screens */
+  .company-logo {
+    width: 270px;
+  }
+
+  /* Remove any possible overflow */
+  body, html {
+    overflow-x: hidden;
+  }
+}
+/* Desktop layout */
+.company-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Content first */
+.company-content {
+  order: 1;
+  width: 70%;
+}
+
+/* Logo after content */
+.company-logo-section {
+  order: 2;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+
+  .company-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Make sure content always comes first */
+  .company-content {
+    order: 1;
+    width: 100%;
+  }
+
+  /* Logo always comes after content */
+  .company-logo-section {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Make logos bigger on mobile */
+  .company-logo {
+    width: 170px;
+    height: auto;
+  }
+}
+/* ------------------------------
+   UNIVERSAL MOBILE LOGO POSITION FIX
+   ------------------------------ */
+@media (max-width: 768px) {
+
+  .company-card {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  /* Content must always come first */
+  .left-side,
+  .left1-side {
+    order: 1 !important;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Logos always after content */
+  .right-side,
+  .right1-side {
+    order: 2 !important;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Logo size */
+  .company-logo {
+    width: 260px !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 1024px) {
+  .background-company {
+    padding: 3rem 8%;
+    min-height: 550px;
+  }
+
+  .company-title {
+    font-size: 1.9rem;
+    padding-left: 20px;
+  }
+
+  .background-company p {
+    font-size: 1.1rem;
+    padding-left: 20px;
+    max-width: 60%;
+  }
+}
+@media (max-width: 900px) {
+  
+.background-company {
+    min-height: 500px;
+    padding: 2.5rem 6%;
+  }
+
+  .company-title {
+    font-size: 1.8rem;
+    padding-left: 15px;
+  }
+
+  .background-company p {
+    font-size: 1rem;
+    padding-left: 15px;
+    max-width: 70%;
+  }
+}
+@media (max-width: 768px) {
+.background-company {
+    min-height: 480px;
+    padding: 2rem 5%;
+  }
+
+  .company-title {
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+
+  .background-company p {
+    font-size: 0.95rem;
+    padding-left: 10px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+ .background-company {
+    min-height: 450px;
+    padding: 2rem 4%;
+    background-position: center center;
+  }
+
+  .company-title {
+    font-size: 1.5rem;
+    padding-left: 5px;
+  }
+
+  .background-company p {
+    font-size: 0.9rem;
+    padding-left: 5px;
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .background-company {
+    min-height: 400px;
+    padding: 1.5rem 3%;
+  }
+
+  .company-title {
+    font-size: 1.3rem;
+    padding-left: 0;
+  }
+
+  .background-company p {
+    font-size: 0.85rem;
+    padding-left: 0;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 360px) {
+    .background-company {
+    min-height: 380px;
+    padding: 1.5rem 2%;
+  }
+
+  .company-title {
+    font-size: 1.2rem;
+  }
+
+  .background-company p {
+    font-size: 0.8rem;
+  }
+}
+  </style>
+<body>
+
+  <nav class="navbar">
+  <div class="navbar-logo">
+     RVH Group
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="navbar-menu" id="navbarMenu">
+    <a href="index.html">Home</a> 
+    <a href="about.html">About</a>
+    <a href="career.html">Careers</a> 
+    <a href="companies.html">Companies</a> 
+    <a href="contact.html">Contact</a> 
+    <a href="faqs.html">FAQ's</a> 
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h2>Menu</h2>
+      <span class="close-btn" id="closeMenu"></span>
+    </div>
+
+    <div class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="career.html">Careers</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQ's</a>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+</nav>
+  <div class="container-company-inner">
+      <div class="company-left">
+        <div class="background-company">
+          <h2 class="company-title">Company at RVH Group</h2>
+          <p class="company-lead">
+            At RVH Group, we believe talent is the foundation of every successful company. As a growing Group of Companies operating across multiple industries, we offer diverse career opportunities that enable individuals to learn, lead, and grow within a dynamic ecosystem.
+          </p>
+          <p class="company-sub">
+            Whether you aim to excel in Technology, HR, Marketing, Finance, or Corporate Operations — RVH Group provides a platform where your skills create impact.
+          </p><br>
+          
+        </div>
+      </div>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">Companies • RVH Group</span>
+          <h1>Our Subsidiaries & Business Verticals</h1>
+          <p class="lead">RVH Group operates as a connected ecosystem of subsidiary companies — each specialized yet tightly integrated to deliver end-to-end solutions across technology, infrastructure, marketing, finance and talent development.</p>
+          <div class="cta-row">
+            <button class="btn" onclick="document.location.href='career.html'">Careers at RVH</button>
+            <button class="btn secondary" onclick="document.location.href='contact.html'">Contact Sales</button>
+          </div>
+        </div>
+
+        <aside style="width:360px">
+          <div class="hero-card" style="background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px;border:1px solid rgba(15,23,36,0.04);box-shadow:var(--shadow)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <div style="font-weight:700">At a glance</div>
+              <div style="color:var(--muted);font-size:13px">Since 2023</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">9</div>
+                <div style="color:var(--muted);font-size:13px">Divisions</div>
+              </div>
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">250+</div>
+                <div style="color:var(--muted);font-size:13px">Projects</div>
+              </div>
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">50+</div>
+                <div style="color:var(--muted);font-size:13px">Clients</div>
+              </div>
+              <div style="background:white;padding:12px;border-radius:10px;text-align:center">
+                <div style="font-weight:800;color:var(--brand);font-size:20px">1000+</div>
+                <div style="color:var(--muted);font-size:13px">Applicants / yr</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="cards-wrap">
+  <div class="cards-grid">
+
+    <div class="company-card">
+      <div class="left-side">
+        <div class="company-title">Information Technology</div>
+        <div class="company-desc">Information Technology has become an integral part of modern life. From mobile apps and cloud platforms to digital banking and artificial intelligence, IT shapes the way we work, learn, communicate, and interact. It supports industries like healthcare, education, finance, manufacturing, government, retail, and entertainment by enabling digital transformation and smarter operations.</div>
+      </div>
+      <div class="right-side">
+        <img class="company-logo" src="logo.png">
+        
+        <a href="https://www.futureinvo.com/" target="_blank">
+  <button class="small-btn">Visit Website</button>
+</a>
+
+      </div>
+    </div>
+
+    <div class="company-card">
+      
+      <div class="right1-side">
+        <img class="company-logo" src="futronix3-removebg-preview.png">
+        <button class="small-btn">Visit Website</button>
+      </div>
+      <div class="left1-side">
+        <div class="company-title">Tech Support</div>
+        <div class="company-desc">Our Tech Support Services are designed to provide quick, reliable, and expert assistance to keep your technology running without interruption. From diagnosing technical issues to offering step-by-step guidance, our team ensures timely support for computers, software, networks, and digital applications. We provide remote and on-site support with proactive monitoring to prevent problems before they occur. Our goal is to improve system performance, minimize downtime, and deliver a smooth technology experience for users and organizations.</div>
+      </div>
+    </div>
+
+    <div class="company-card">
+      <div class="left-side">
+        <div class="company-title textcenter">Digital Marketing</div>
+        <div class="company-desc">Digital Marketing is a strategic approach to promoting brands, products, and services through online platforms. It involves using tools like social media, search engines, email campaigns, and content marketing to reach the right audience at the right time. With data-driven strategies and creative campaigns, digital marketing helps businesses build brand awareness, attract potential customers, and drive measurable growth.</div>
+      </div>
+      <div class="right-side">
+        <img class="company-logo" src="skill3-removebg-preview.png">
+        <img class="company-logo" src="hero3-removebg-preview.png">
+      </div>
+    </div>
+    
+    <div class="company-card">
+      
+      <div class="right1-side">
+        <img class="company-logo" src="gyantrix4.png">
+        <a>Gyantrix Acadamy</a><br><br>
+        <button class="small-btn">Visit Website</button>
+      </div>
+      <div class="left1-side">
+        <div class="company-title">Training </div>
+        <div class="company-desc">Training plays a vital role in enhancing knowledge, improving skills, and shaping individuals for professional growth. Our Training & Skill Development programs are designed to provide practical, industry-focused learning that empowers participants to excel in their careers. We offer tailored training modules that combine theoretical understanding with real-world application, ensuring learners gain hands-on experience and confidence.</div>
+      </div>
+    </div>
+
+    <div class="company-card">
+      <div class="left-side">
+        <div class="company-title textcenter">Human Resources</div>
+        <div class="company-desc">
+Human Resources (HR) is the core function that manages and supports an organization's most valuable asset — its people. HR focuses on recruitment, employee welfare, performance management, training, and creating a positive work environment that encourages growth and productivity. A strong HR team ensures that the right talent is hired, nurtured, and retained through effective policies, employee engagement, and career development initiatives</div>
+      </div>
+      <div class="right-side">
+       <img class="company-logo" src="verify3-removebg-preview.png">
+       <img class="company-logo" src="ghs3-removebg-preview.png"> 
+      </div>
+    </div>
+
+    <div class="company-card">
+      
+      <div class="right1-side">
+        <img class="company-logo" src="tax3-removebg-preview.png">
+        <img class="company-logo" src="qfl3-removebg-preview.png">
+      </div>
+      <div class="left1-side">
+        <div class="company-title textcenter">Finance & Registration</div>
+        <div class="company-desc">
+Finance and Registration services play a crucial role in helping individuals and businesses establish a strong legal and financial foundation. These services include business registration, financial documentation, compliance support, tax filing, and statutory registrations required to operate smoothly and legally. With expert guidance, businesses can avoid legal complications, maintain financial transparency, and meet regulatory requirements on time.</div>
+      </div>
+    </div>
+
+    <div class="company-card">
+      <div class="left-side">
+        <div class="company-title textcenter">Others</div>
+        <div class="company-desc">
+Marketing is the strategic process of understanding customer needs, creating value, and building strong brand connections to drive business growth. It involves researching markets, identifying target audiences, developing compelling messages, and promoting products or services through the right channels. Effective marketing not only increases brand visibility but also builds trust, drives customer engagement, and enhances sales.</div>
+      </div>
+      <div class="right-side">
+       
+       <img class="company-logo" src="market5.png">
+       <img class="company-logo" src="interiors3.png">
+       <img class="company-logo" src="construct5.png">
+        
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+      
+
+      <!-- Synergy -->
+      <div class="synergy">
+        <div class="synergy-card">
+          <h3 style="margin:0 0 8px">How Our Companies Work Together</h3>
+          <p style="color:var(--muted);margin-bottom:14px">Each RVH company specializes in its domain, but we design engagements so clients benefit from an integrated delivery model — shared technology platforms, trained operations teams, and single-point accountability.</p>
+
+          <ul style="color:var(--muted);line-height:1.8;margin-left:18px">
+            <li><strong>Single-Source Delivery:</strong> From design to deployment and support.</li>
+            <li><strong>Cross-Company Talent:</strong> Skilled teams shared across projects.</li>
+            <li><strong>End-to-End Accountability:</strong> One partner, many capabilities.</li>
+          </ul>
+        </div>
+
+        <div class="synergy-visual">
+          <div style="font-weight:700;color:var(--brand);margin-bottom:12px">RVH Synergy</div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+            <div class="node">IT</div>
+            <div class="node">Digital</div>
+            <div class="node">Real Estate</div>
+            <div class="node">Construction</div>
+            <div class="node">Interiors</div>
+            <div class="node">BPO</div>
+            <div class="node">Training</div>
+            <div class="node">Finance</div>
+          </div>
+          <p style="color:var(--muted);margin-top:14px;font-size:13px">Nodes are teams that collaborate on project lifecycles — from discovery to operations.</p>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="n">9</div>
+          <div class="l">Integrated Divisions</div>
+        </div>
+        <div class="stat-card">
+          <div class="n">250+</div>
+          <div class="l">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="n">50+</div>
+          <div class="l">Trusted Clients</div>
+        </div>
+      </div>
+
+      <div class="cta-strip" style="margin-top:28px">
+        <div class="text">
+          <h3 style="margin:0">Partner with a group that delivers end-to-end</h3>
+          <p style="margin:6px 0 0;color:var(--muted)">Explore our companies for services, partnerships, or careers across RVH Group.</p>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <button class="btn" onclick="document.location.href='contact.html'">Get a Consultation</button>
+          <button class="btn secondary" onclick="document.location.href='career.html'">View Careers</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+<footer>
+    <div class="footer">
+        <div  class="rvhfooter">
+      <h3>RVH Group</h3>
+      <p>RVH Group refers to the global organization, and may refer to one or more, of the member firms,<br> each of which is a separate legal entity. We provide comprehensive services to clients.</p>
+        </div>
+
+        <div class="fqueries">
+  <h3>What We Do</h3>
+  <p>We provide a wide range of professional services designed to help individuals, startups, and businesses grow with confidence in the digital age. Our focus is on delivering high-quality, innovative and result-oriented solutions.</p>
+  <p>From IT services, digital marketing, and business support to training & professional development — RVH Group is committed to empowering growth through expertise and excellence.</p>
+</div>
+
+      <div class="socialmedia">
+  <h3>Contact Us</h3>
+  <p>We’re here to support you with any inquiries related to our services, partnerships, training programs or business opportunities. Connect with us and our team will be happy to assist you.</p>
+
+  <p>
+    📞 +91-73868-79818<br>
+    🌐 www.rvhgroups.com<br>
+    ✉️ info@rvhgroups.com
+  </p>
+
+  <span>Follow Us:</span>
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</div>
+
+    </div>
+  </footer>
+<script>
+
+  const hamburgerIcon = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const overlay = document.getElementById("overlay");
+
+  hamburgerIcon.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.navbar-menu');
+    hamburger && hamburger.addEventListener('click', () => {
+      if(getComputedStyle(navMenu).display === 'none') navMenu.style.display = 'flex';
+      else navMenu.style.display = 'none';
+    });
+ 
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVH Group - Empowering Ideas With Intelligent Innovation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body{
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+.faq-section {
+  margin: 60px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  margin-bottom: 25px;
+  color: #003b7a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.faq-container {
+  text-align: left;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  padding: 0 20px;
+  position: relative;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), 
+    linear-gradient(45deg, #003b7a, #0088ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 59, 122, 0.2);
+}
+
+.faq-item input {
+  display: none;
+}
+
+.faq-question {
+  display: block;
+  padding: 18px 0;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #003b7a;
+  font-size: 17px;
+}
+
+.faq-question::after {
+  content: "➕";
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.faq-item input:checked + .faq-question::after {
+  content: "➖";
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+  opacity: 0;
+}
+
+.faq-item input:checked ~ .faq-answer {
+  max-height: 200px;
+  padding-bottom: 15px;
+  opacity: 1;
+}
+
+.faq-answer p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  padding-right: 25px;
+}
+
+</style>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-logo">
+       RVH Group
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar-menu" id="navbarMenu">
+      <a href="index.html">Home</a> 
+    <a href="about.html">About</a>
+    <a href="career.html">Careers</a> 
+    <a href="companies.html">Companies</a> 
+    <a href="contact.html">Contact</a> 
+    <a href="faqs.html">FAQ's</a> 
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h2>Menu</h2>
+      <span class="close-btn" id="closeMenu">&times;</span>
+    </div>
+
+    <div class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="career.html">Careers</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQ's</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </nav>
+
+
+
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <input type="checkbox" id="q1">
+      <label for="q1" class="faq-question">How long does it take to receive a response?</label>
+      <div class="faq-answer">
+        <p>Our team usually responds within 24–48 hours on working days. For urgent matters, you can reach out via phone.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q2">
+      <label for="q2" class="faq-question">Where can I apply for job opportunities at RVH Group?</label>
+      <div class="faq-answer">
+        <p>You can visit our Careers page to explore openings across all subsidiary companies and submit your application directly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q3">
+      <label for="q3" class="faq-question">Do you offer internships or training programs?</label>
+      <div class="faq-answer">
+        <p>Yes, RVH Academy offers internships, skill development programs, and corporate training opportunities throughout the year.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q4">
+      <label for="q4" class="faq-question">Can I contact a specific subsidiary directly?</label>
+      <div class="faq-answer">
+        <p>Yes, we provide direct contact options for IT, marketing, HR, finance, and training departments in the “Contact a Department” section above.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q5">
+      <label for="q5" class="faq-question">Where is the RVH Group office located?</label>
+      <div class="faq-answer">
+        <p>Our headquarters is located in Hyderabad, Telangana, India. Online consultations & support are available for pan-India clients.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q6">
+      <label for="q6" class="faq-question">Do you collaborate with startups and small businesses?</label>
+      <div class="faq-answer">
+        <p>Yes, RVH Group works with startups, SMEs, and established enterprises. We offer scalable solutions tailored to the stage and requirements of your business.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" id="q7">
+      <label for="q7" class="faq-question">Can I visit the RVH office without an appointment?</label>
+      <div class="faq-answer">
+        <p>For a smooth experience, we highly recommend booking an appointment before visiting. This ensures the right team member is available to assist you.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" id="q8">
+      <label for="q8" class="faq-question">Does RVH Group offer international career opportunities?</label>
+      <div class="faq-answer">
+        <p>Yes, some of our companies offer remote and overseas project-based roles. International opportunities are mentioned in job postings when available.</p>
+      </div>
+    </div>
+  <div class="faq-item">
+      <input type="checkbox" id="q9">
+      <label for="q9" class="faq-question">Are corporate training programs available for external organizations?</label>
+      <div class="faq-answer">
+        <p>Yes, RVH Training Division offers customized corporate training programs for companies, teams, and educational institutions based on their skill and growth requirements.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<footer>
+    <div class="footer">
+        <div  class="rvhfooter">
+      <h3>RVH Group</h3>
+      <p>RVH Group refers to the global organization, and may refer to one or more, of the member firms,<br> each of which is a separate legal entity. We provide comprehensive services to clients.</p>
+        </div>
+
+        <div class="fqueries">
+  <h3>What We Do</h3>
+  <p>We provide a wide range of professional services designed to help individuals, startups, and businesses grow with confidence in the digital age. Our focus is on delivering high-quality, innovative and result-oriented solutions.</p>
+  <p>From IT services, digital marketing, and business support to training & professional development — RVH Group is committed to empowering growth through expertise and excellence.</p>
+</div>
+
+      <div class="socialmedia">
+  <h3>Contact Us</h3>
+  <p>We’re here to support you with any inquiries related to our services, partnerships, training programs or business opportunities. Connect with us and our team will be happy to assist you.</p>
+
+  <p>
+    📞 +91-73868-79818<br>
+    🌐 www.rvhgroups.com<br>
+    ✉️ info@rvhgroups.com
+  </p>
+
+  <span>Follow Us:</span>
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</div>
+
+    </div>
+  </footer>
+
+  <script>
+const hamburgerIcon = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("overlay");
+
+    hamburgerIcon.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+   </script>
+
+</body>
+</html>
